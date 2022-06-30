@@ -18,7 +18,6 @@ static void fn_write_reg(uint8_t addr, uint8_t data)
 
 static MAX7219_digit_dev_t dev = {
     .nb_digits = 2,
-    .on_screen = {0},
     .fn_write_reg = &fn_write_reg,
 };
 

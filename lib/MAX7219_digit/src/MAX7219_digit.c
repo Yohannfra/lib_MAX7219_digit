@@ -9,10 +9,6 @@ void MAX7219_digit_init(MAX7219_digit_dev_t *dev)
     dev->fn_write_reg(0x0f, 0x00);               // test display：1；EOT，display：0
 
     MAX7219_digit_clear(dev);
-
-    for (int i = 1; i <= dev->nb_digits; i++) {
-        MAX7219_digit_set_digit(dev, i, dev->on_screen[i - 1]);
-    }
 }
 
 void MAX7219_digit_clear(MAX7219_digit_dev_t *dev)

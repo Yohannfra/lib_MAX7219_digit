@@ -6,7 +6,6 @@
 
 typedef struct {
     uint8_t nb_digits;
-    uint8_t on_screen[8];
     void (*fn_write_reg)(uint8_t, uint8_t);
 } MAX7219_digit_dev_t;
 
