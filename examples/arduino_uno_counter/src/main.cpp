@@ -1,8 +1,6 @@
 #include <Arduino.h>
 
-extern "C" {
 #include "MAX7219_digit.h"
-}
 
 constexpr int CLK_PIN = 13;
 constexpr int MOSI_PIN = 11;
