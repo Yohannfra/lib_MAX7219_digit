@@ -38,5 +38,6 @@ void loop()
 {
     for (uint8_t i = 0; i <= 99; i++) {
         MAX7219_digit_set_number(&dev, i);
+        delay(500);
     }
 }
