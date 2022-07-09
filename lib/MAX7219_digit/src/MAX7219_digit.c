@@ -40,3 +40,13 @@ void MAX7219_digit_set_number(MAX7219_digit_dev_t *dev, uint32_t n)
         n /= 10;
     }
 }
+
+void MAX7219_digit_turn_on(MAX7219_digit_dev_t *dev)
+{
+    dev->fn_write_reg(0x0c, 0x01);
+}
+
+void MAX7219_digit_turn_off(MAX7219_digit_dev_t *dev)
+{
+    dev->fn_write_reg(0x0c, 0x00);
+}

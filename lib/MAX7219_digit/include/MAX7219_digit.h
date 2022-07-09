@@ -17,6 +17,8 @@ void MAX7219_digit_init(MAX7219_digit_dev_t *dev);
 void MAX7219_digit_clear(MAX7219_digit_dev_t *dev);
 void MAX7219_digit_set_digit(MAX7219_digit_dev_t *dev, uint8_t index, uint8_t number);
 void MAX7219_digit_set_number(MAX7219_digit_dev_t *dev, uint32_t number);
+void MAX7219_digit_turn_on(MAX7219_digit_dev_t *dev);
+void MAX7219_digit_turn_off(MAX7219_digit_dev_t *dev);
 
 #ifdef __cplusplus
 }
