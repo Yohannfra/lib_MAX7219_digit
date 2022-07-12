@@ -32,12 +32,13 @@ void MAX7219_digit_set_number(MAX7219_digit_dev_t *dev, uint32_t n)
             MAX7219_digit_set_digit(dev, i, 0);
         }
     }
-
-    while (n > 0) {
-        uint32_t r = n % 10;
-        MAX7219_digit_set_digit(dev, index, r);
-        index -= 1;
-        n /= 10;
+    for (int i = 1; n > 0 && i++ <= dev->nb_digits; i++) {
+        while (n > 0 && i++ <= dev->nb_digits) {
+            uint32_t r = n % 10;
+            MAX7219_digit_set_digit(dev, index, r);
+            index -= 1;
+            n /= 10;
+        }
     }
 }
 
